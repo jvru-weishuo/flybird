@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <style>
+        main>.chat{
+            height: 20rem;
+            background-color: antiquewhite;
+        }
+        main>div{
+            background-color: rgb(61, 91, 131);
+            height: 10rem;
+        }
+        .content{
+            height: 5rem;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="chat">
+
+        </section>
+        <div class="input">
+            <div class="content" contenteditable="true"></div>
+            <button>submit</button>
+        </div>
+    </main>
+    <script>
+        
+        $(document).ready(function(){
+            $('body').prepend('<header>');
+            $('header').text('hello world.');
+            $('header').append('<div>');
+            $('header>div').text('make it.');
+            $('header>div').css('background-color','yellow');
+
+            $('button').on('click',function(){
+                var data = $('.content').text();
+                console.info(data);
+            })
+
+            const socket = io('http://localhost:3000');
+            socket.on('connect',()=>{
+                //either with send()
+                socket.send('hello!');
+                //or with emit() and custom event names
+                socket.emit('salutations','hello');
+            })
+
+            //handle the event send with socket.send()
+            socket.on('message',data=>{
+                console.log(data);
+            })
+
+            //handle the event sent with socket.emit()
+            socket.on('greetings',(elem1,elem2)=>{
+                console.log(elem1,elem2);
+            })
+        })
+    </script>
+</body>
+</html>
