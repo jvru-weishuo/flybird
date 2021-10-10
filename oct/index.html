@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <!--引入bootstrap的css文件-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <!--font-awesome字体库-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
 
 
     <style>
@@ -19,17 +23,51 @@
             padding-left: 0px !important;
             padding-right: 0px !important;
         }
+        .row{
+            --bs-gutter-x: 0rem;
+        }
+        header{
+            border-bottom: black solid 1px;
+        }
+        .logo div img{
+            height: 3.5rem;
+            
+        }
+        .logo{
+            border: black solid 1px;
+            padding: 14px;
+            cursor: pointer;
+        }
+        .logo:hover{
+            border: blue solid 15px;
+            padding: 0px;
+        }
         .info{
             /*display: inline-block;*/
             background-color: black;
             color: white;
+            height: 3rem;
+        }
+        .info>div{
+            width: 20%;
+            display: inline-block;
         }
         .content>div{
             /*display: inline-block;*/
             float: left;
             width: 20%;
             border: 1px solid black;
+            padding: 9px;
             text-align: center;
+            cursor: pointer;
+            font-size: medium;
+        }
+        .content>div:hover{
+            border: #fe3e10 solid 10px;
+            padding: 0px;
+        }
+        .content>div>p{
+            margin-top: 1rem;
             
         }
     </style>
@@ -37,16 +75,23 @@
 <body class="container-fluid">
     <header class="row">
         <div class="logo col-md-3">
-            <div>
-                <p>SAUKA</p>
-                <p>Art & Design Dducation</p>
+            <div class="text-center">
+                <img class="mt-3" src="image/logo.jpg" alt="logo">
             </div>
         </div>
         <div class="catalogue col-md-9">
             <div class="info">
-                <span>北京</span>
-                <span>联系方式：010-0000 0000</span>
-                <button>登录/注册</button>
+                <div class="text-center float-end">
+                    <button >登录/注册</button>
+                </div>
+                <div class="text-center float-end">
+                    <p>联系方式：010-0000 0000</p>
+                </div>
+                <div class="text-center float-end">
+                    <p>北京</p>
+                </div>
+                
+                
             </div>
             <div class="content">
                 <div>
@@ -67,12 +112,77 @@
             </div>
         </div>
     </header>
+    <nav style="border: black solid 1px;">
+        <span class="d-inline-block py-3 px-3 ms-5" style="color: #3744D0;">主页</span>
+        <i class="fa fa-caret-right px-3"></i>
+        <span class="px-3">关于我们</span>
+        <i class="fa fa-caret-right px-3"></i>
+        <span class="px-3">为什么选择ASUKA</span>
+    </nav>
     <main>
-        <section>
+        <div>
+            <img src="image/show.jpg" alt="show">
+        </div>
+        <div class="container">
+            <article class="row">
+                <div class="col-md-9">
+                    <h2 class="mt-5 mb-4"><b>为什么选择ASUKA?</b></h2>
+                    <p>例子，并非真实文案：调研是一个先摄取后输出的过程，是通过你对于主题概念的独特见解而先产生调研方向，然后跟随调研的方向展开的过程，
+                        是拓展你的主题深度和引导你的设计概念的中间站。Research会使得你做的所有设计Reasonable和Rational。调研绝对不可以和拼贴划等号，
+                        拼贴是一种手法，你可以用拼贴的形式去体现和整合你的调研资料，但拼贴也不意味着你把所有不同层次的调研堆积在同一个页面上。它应当是
+                        有逻辑式的展开，有递进关系的延伸。刚刚学习正确的进行Reasearch的学生往往会认为一切都要充满了客观、科学和真理，但是你往往不应
+                        该忽视掉你最初建立的情绪，你想要什么？你认为这个调研的内容应该如何取舍？谁成为主角？那些学科的东西可以介入？这些问题都是由
+                        你、由这个系列的创作者来把控的，某种程度上我们是主观的。在艺术设计创作的过程中，大家不能太过于追求“真理”而走偏，把自己的作
+                        品变成了一篇没有任何情感和你个人特质的学术报告。
+                    </p>
+                    <br>
+                    <p style="font-family: alibaba;">
+                        2019年的作品集的创作正在进行中，为什么调研对于国内学习设计的小伙伴们这么难以突破呢？今天为大家分享一些帮助大家能够快速突破
+                        调研鬼打墙的实用小Tips。
+                    </p>
+                    <br>
+                    <p>
+                        1.调研要划分枝干和层次，自己要清楚地知道所收集的资料服务于什么样的设计方向。能够有逻辑的去安排调研资料的组合，
+                        让自己的思路看起来明细通顺，让面试官在阅览时能够感受你的思维递进的过程和调研的深度是关键。
+                    </p>
+                    <br>
+                    <p>
+                        2.调研要有一手资料和二手资料相互配合，一手的调研资料往往来源与你对于主题的理解和对于二手资料的思考而产生
+                        的自己的表述，它不是单纯的立裁或者面料实验。而是学会用艺术表达的手法，来视觉化你对于调研的分析和理解，可
+                        以说是Reasearch初期的一个Outcome。
+                    </p>
+                    <br>
+                    <p>
+                        3.很多学生的调研和设计产出是脱节的，把调研当作是一个阶段性的任务，完成后就抛在脑后，设计过程中对于调研资料的转化
+                        和应用非常有限，使得倒是觉得你设计很多idea看不到来源出处，有些空想进而觉得你的调研的转化能力是有问题的。
+                    </p>
+                    <br>
+                    <p>
+                        大家要意识到调研应该是伴随着你整个系列的完成不断地补充和跟进的。所以这也是为什么我在开始就提到了调研是一个摄取和输出
+                        的过程，它绝对不是一个前期阶段，而是一直帮助你把控整个系列发展的重要线索。
+                    </p>
+                </div>
+                <div class="col-md-3"></div>
+            </article>
+        </div>
         
-        </section>
     </main>
-    <footer>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="image/work.jpg" alt="work" style="max-width: 100%;"> 
+        </div>
+        <div class="col-md-4" style="background-color: #A8B377">
+            <div class="my-5 ms-5">
+                <h4 class="text-white">阅读更多</h4>
+                <h3><b>2021届优秀毕业生录取成绩</b></h3>
+            </div>
+            <div class="ms-5" style="margin-top: 15rem;cursor: pointer;">
+                <h3 class="d-inline-block"><b>查看</b></h3>
+                <i class="fa fa-arrow-right text-white" style="margin-left: 12rem;"></i>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
         <p>平台提供真实可靠的教师资源，帮助有艺术留学需求的学生找到自己的dream tutor。
             平台目前提供艺术留学所需的作品集指导、艺术专业基础指导、留学申请所需的文书
             及其他各项留学申请相关业务。</p>
